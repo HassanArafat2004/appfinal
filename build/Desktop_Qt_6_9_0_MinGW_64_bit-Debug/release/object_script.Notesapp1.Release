@@ -1,0 +1,16 @@
+release/createnote.o
+release/dashboard.o
+release/main.o
+release/mainwindow.o
+release/notelist.o
+release/reports.o
+release/signup.o
+release/user.o
+release/adminwindow.o
+release/moc_createnote.o
+release/moc_dashboard.o
+release/moc_mainwindow.o
+release/moc_notelist.o
+release/moc_reports.o
+release/moc_signup.o
+release/moc_adminwindow.o
