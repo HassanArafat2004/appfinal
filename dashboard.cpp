@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include "dashboard.h"
 #include "ui_dashboard.h"
 #include <QTimer>
@@ -67,19 +66,3 @@ void dashboard::on_reportsButton_clicked() {
     }
     this->close();
 }
-=======
-#include "dashboard.h"
-#include "ui_dashboard.h"
-
-dashboard::dashboard(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::dashboard)
-{
-    ui->setupUi(this);
-}
-
-dashboard::~dashboard()
-{
-    delete ui;
-}
->>>>>>> f29377b6a49b3dc9fa486f0f187a3e82ccd13fde
