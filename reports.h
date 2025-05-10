@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #ifndef REPORTS_H
 #define REPORTS_H
 
@@ -45,3 +46,27 @@ private:
 };
 
 #endif // REPORTS_H
+=======
+#ifndef REPORTS_H
+#define REPORTS_H
+
+#include <QWidget>
+
+namespace Ui {
+class reports;
+}
+
+class reports : public QWidget
+{
+    Q_OBJECT
+
+public:
+    explicit reports(QWidget *parent = nullptr);
+    ~reports();
+
+private:
+    Ui::reports *ui;
+};
+
+#endif // REPORTS_H
+>>>>>>> f29377b6a49b3dc9fa486f0f187a3e82ccd13fde

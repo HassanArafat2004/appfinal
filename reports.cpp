@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include "reports.h"
 #include "ui_reports.h"
 #include <QStandardItemModel>
@@ -152,3 +153,19 @@ void reports::on_backToDashboardButton_clicked() {
     emit backToDashboardRequested();
     this->close();
 }
+=======
+#include "reports.h"
+#include "ui_reports.h"
+
+reports::reports(QWidget *parent)
+    : QWidget(parent)
+    , ui(new Ui::reports)
+{
+    ui->setupUi(this);
+}
+
+reports::~reports()
+{
+    delete ui;
+}
+>>>>>>> f29377b6a49b3dc9fa486f0f187a3e82ccd13fde
