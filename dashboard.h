@@ -7,6 +7,7 @@
 #include <QDateTime>
 #include <QMessageBox>
 #include "reports.h"
+#include "createnote.h"
 
 namespace Ui {
 class dashboard;
@@ -33,6 +34,7 @@ private:
     QString m_username;
     QTimer *clockTimer;
     reports *reportsWindow;
+    CreateNote *createNoteWindow { nullptr };
 };
 
 #endif
