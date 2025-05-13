@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CreateNote</class>
+ <widget class="QMainWindow" name="CreateNote">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1280</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Create Note</string>
+  </property>
+  <property name="styleSheet">
+   <string>QWidget {
+    background-color: #f5f7fa;
+    font-family: &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif;
+    font-size: 14px;
+    color: #000000;
+}
+QLabel {
+    color: #000000;
+}
+QLabel#titleLabel {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+QLineEdit, QTextEdit {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: #000000;
+    font-size: 14px;
+}
+QLineEdit:focus, QTextEdit:focus {
+    border: 2px solid #2563eb;
+    outline: none;
+}
+QPushButton {
+    background-color: #2563eb;
+    color: white;
+    border-radius: 6px;
+    padding: 12px 24px;
+    min-height: 48px;
+    font-weight: 500;
+    font-size: 15px;
+}
+QPushButton:hover {
+    background-color: #1d4ed8;
+}
+QPushButton:pressed {
+    background-color: #1e40af;
+}
+QPushButton#cancelNoteButton {
+    background-color: #e5e7eb;
+    color: #1a1a1a;
+}
+QPushButton#cancelNoteButton:hover {
+    background-color: #d1d5db;
+}
+QTabWidget::pane {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    background: #ffffff;
+}
+QTabBar::tab {
+    background: #f5f7fa;
+    padding: 8px 16px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    color: #4a5568;
+    font-weight: 500;
+    margin-right: 4px;
+}
+QTabBar::tab:selected {
+    background: #ffffff;
+    color: #2563eb;
+    border: 1px solid #e2e8f0;
+    border-bottom: none;
+}
+QTabBar::tab:hover:!selected {
+    background: #edf2f7;
+}
+QGroupBox {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-top: 16px;
+    padding: 16px;
+}
+QGroupBox::title {
+    color: #2d3748;
+    font-size: 16px;
+    font-weight: 600;
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 8px;
+}
+QSlider::groove:horizontal {
+    border: 1px solid #e2e8f0;
+    height: 8px;
+    background: #edf2f7;
+    margin: 2px 0;
+    border-radius: 4px;
+}
+QSlider::handle:horizontal {
+    background: #2563eb;
+    border: none;
+    width: 16px;
+    height: 16px;
+    margin: -4px 0;
+    border-radius: 8px;
+}
+QSlider::handle:horizontal:hover {
+    background: #1d4ed8;
+}
+QSlider::sub-page:horizontal {
+    background: #2563eb;
+    border-radius: 4px;
+}
+QMenuBar {
+    background-color: #ffffff;
+    color: #000000;
+}
+QMenuBar::item {
+    color: #000000;
+}
+QStatusBar {
+    color: #000000;
+}</string>
+  </property>
+  <widget class="QWidget" name="createNoteCentralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>24</number>
+    </property>
+    <property name="leftMargin">
+     <number>32</number>
+    </property>
+    <property name="topMargin">
+     <number>32</number>
+    </property>
+    <property name="rightMargin">
+     <number>32</number>
+    </property>
+    <property name="bottomMargin">
+     <number>32</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="titleLabel">
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <pointsize>-1</pointsize>
+        <fontweight>DemiBold</fontweight>
+       </font>
+      </property>
+      <property name="text">
+       <string>Create New Note</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="titleLineEdit">
+      <property name="placeholderText">
+       <string>Enter note title...</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="modeTabWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="textTab">
+       <attribute name="title">
+        <string>Text Note</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="textNoteLayout">
+        <property name="spacing">
+         <number>16</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="textColorLayout">
+          <item>
+           <widget class="QLabel" name="textColorLabel">
+            <property name="text">
+             <string>Text Color:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="textColorButton">
+            <property name="text">
+             <string>Choose Color</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textContent">
+          <property name="placeholderText">
+           <string>Enter your note content here...</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="doodleTab">
+       <attribute name="title">
+        <string>Doodle Note</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="doodleNoteLayout">
+        <property name="spacing">
+         <number>16</number>
+        </property>
+        <item>
+         <widget class="QGroupBox" name="doodleToolsGroupBox">
+          <property name="title">
+           <string>Drawing Tools</string>
+          </property>
+          <layout class="QHBoxLayout" name="doodleToolsLayout">
+           <property name="spacing">
+            <number>16</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="clearButton">
+             <property name="text">
+              <string>Clear Canvas</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="eraseButton">
+             <property name="text">
+              <string>Erase</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="brushSizeLabel">
+             <property name="text">
+              <string>Brush Size:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSlider" name="brushSizeSlider">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>20</number>
+             </property>
+             <property name="value">
+              <number>5</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="brushSizeValueLabel">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="brushColorButton">
+             <property name="text">
+              <string>Brush Color</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="DoodleView" name="doodleCanvas">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>400</height>
+           </size>
+          </property>
+          <property name="cursor" stdset="0">
+           <cursorShape>CrossCursor</cursorShape>
+          </property>
+          <property name="mouseTracking">
+           <bool>true</bool>
+          </property>
+          <property name="styleSheet">
+           <string>QGraphicsView {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+}</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="buttonLayout">
+      <property name="spacing">
+       <number>24</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="saveNoteButton">
+        <property name="text">
+         <string>Save Note</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="errorLabel">
+        <property name="styleSheet">
+         <string>color: red;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="cancelNoteButton">
+        <property name="text">
+         <string>Cancel</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="createNoteMenuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>‎ </string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="createNoteStatusBar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>DoodleView</class>
+   <extends>QGraphicsView</extends>
+   <header>doodleview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

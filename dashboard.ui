@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dashboard</class>
+ <widget class="QMainWindow" name="dashboard">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1280</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dashboard</string>
+  </property>
+  <property name="styleSheet">
+   <string>QWidget {
+    background-color: #f5f7fa;
+    font-family: &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif;
+    font-size: 14px;
+    color: #000000;
+}
+QLabel {
+    color: #000000;
+}
+QLabel#welcomeLabel {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+QLabel#clockLabel {
+    font-size: 18px;
+    color: #4a5568;
+    font-weight: 500;
+}
+QGroupBox {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-top: 16px;
+    padding: 16px;
+    min-width: 300px;
+    min-height: 200px;
+}
+QGroupBox::title {
+    color: #2d3748;
+    font-size: 16px;
+    font-weight: 600;
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 8px;
+}
+QPushButton {
+    background-color: #2563eb;
+    color: white;
+    border-radius: 6px;
+    padding: 12px 24px;
+    min-height: 48px;
+    font-weight: 500;
+    font-size: 15px;
+}
+QPushButton:hover {
+    background-color: #1d4ed8;
+}
+QPushButton:pressed {
+    background-color: #1e40af;
+}
+QMenuBar {
+    background-color: #ffffff;
+    color: #000000;
+}
+QMenuBar::item {
+    color: #000000;
+}
+QStatusBar {
+    color: #000000;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="dashboardCentralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>24</number>
+    </property>
+    <property name="leftMargin">
+     <number>32</number>
+    </property>
+    <property name="topMargin">
+     <number>32</number>
+    </property>
+    <property name="rightMargin">
+     <number>32</number>
+    </property>
+    <property name="bottomMargin">
+     <number>32</number>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="headerLayout">
+      <item>
+       <widget class="QLabel" name="welcomeLabel">
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>16</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Welcome, &lt;username&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="clockLabel">
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>14</pointsize>
+          <weight>75</weight>
+         </font>
+        </property>
+        <property name="text">
+         <string>Time</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="logoutButton">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Logout</string>
+        </property>
+        <property name="styleSheet">
+         <string>QPushButton#logoutButton {
+    background-color: #e5e7eb;
+    color: #1a1a1a;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: 500;
+}
+QPushButton#logoutButton:hover {
+    background-color: #d1d5db;
+}
+QPushButton#logoutButton:pressed {
+    background-color: #9ca3af;
+}</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="statsLayout">
+      <property name="spacing">
+       <number>24</number>
+      </property>
+      <item>
+       <widget class="QGroupBox" name="totalNotesGroupBox">
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+         </font>
+        </property>
+        <property name="title">
+         <string>Total Notes</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="recentNotesGroupBox">
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+         </font>
+        </property>
+        <property name="title">
+         <string>Recent Notes</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="reportsGroupBox">
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+         </font>
+        </property>
+        <property name="title">
+         <string>System Stats</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Orientation::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="buttonLayout">
+      <property name="spacing">
+       <number>24</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="notesButton">
+        <property name="text">
+         <string>View Notes</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="newNoteButton">
+        <property name="text">
+         <string>Create New Note</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="reportsButton">
+        <property name="text">
+         <string>View Reports</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="dashboardMenuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>‎ </string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="dashboardStatusBar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
